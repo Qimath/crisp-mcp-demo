@@ -1,4 +1,39 @@
-export const USERS_MOCK = [
+/**************************************************************************
+ * TYPES
+ ***************************************************************************/
+
+interface UserPreferences {
+  language      : string;
+  timezone      : string;
+  notifications : boolean;
+}
+
+interface UserAddress {
+  street  : string;
+  city    : string;
+  state   : string;
+  zip     : string;
+  country : string;
+}
+
+interface User {
+  id          : string;
+  name        : string;
+  email       : string;
+  phone       : string;
+  status      : string;
+  created_at  : string;
+  tags        : string[];
+  orders      : string[];
+  preferences : UserPreferences;
+  address     : UserAddress;
+}
+
+/**************************************************************************
+ * MOCKS
+ ***************************************************************************/
+
+const USERS_MOCK: User[] = [
   {
     id          : "UID_001",
     name        : "Chris",
@@ -6,8 +41,8 @@ export const USERS_MOCK = [
     phone       : "+1234567890",
     status      : "active",
     created_at  : "2023-01-15T10:00:00Z",
-    last_login  : "2024-06-01T12:00:00Z",
     tags        : ["customer", "referral"],
+    orders      : ["OID_003", "OID_006"],
     preferences : {
       language      : "en",
       timezone      : "America/New_York",
@@ -20,20 +55,6 @@ export const USERS_MOCK = [
       zip     : "10001",
       country : "USA",
     },
-    orders: [
-      {
-        order_id : "OID_001",
-        date     : "2024-05-20T14:30:00Z",
-        amount   : 199.99,
-        status   : "delivered",
-      },
-      {
-        order_id : "OID_003",
-        date     : "2024-06-05T11:10:00Z",
-        amount   : 49.99,
-        status   : "delivering",
-      },
-    ],
   },
   {
     id          : "UID_002",
@@ -42,8 +63,8 @@ export const USERS_MOCK = [
     phone       : "+1987654321",
     status      : "active",
     created_at  : "2022-11-20T09:30:00Z",
-    last_login  : "2023-12-15T08:45:00Z",
     tags        : ["customer", "ambassador", "vip"],
+    orders      : ["OID_001", "OID_004"],
     preferences : {
       language      : "fr",
       timezone      : "Europe/Paris",
@@ -56,19 +77,33 @@ export const USERS_MOCK = [
       zip     : "75001",
       country : "France",
     },
-    orders: [
-      {
-        order_id : "OID_002",
-        date     : "2023-10-10T16:00:00Z",
-        amount   : 299.98,
-        status   : "processing",
-      },
-      {
-        order_id : "OID_004",
-        date     : "2024-01-15T10:20:00Z",
-        amount   : 89.99,
-        status   : "delivered",
-      },
-    ],
+  },
+  {
+    id          : "UID_003",
+    name        : "Dinis",
+    email       : "dinis@acme.com",
+    phone       : "+447700900123",
+    status      : "active",
+    created_at  : "2024-03-05T13:15:00Z",
+    tags        : ["customer"],
+    orders      : ["OID_002", "OID_005", "OID_007"],
+    preferences : {
+      language      : "en",
+      timezone      : "Europe/London",
+      notifications : true,
+    },
+    address: {
+      street  : "789 King St",
+      city    : "London",
+      state   : "",
+      zip     : "SW1A 1AA",
+      country : "UK",
+    },
   },
 ];
+
+/**************************************************************************
+ * EXPORTS
+ ***************************************************************************/
+
+export { USERS_MOCK };

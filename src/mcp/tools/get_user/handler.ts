@@ -25,11 +25,10 @@ function getUserHandler(input: GetUserInput): GetUserOutput {
           phone       : user.phone,
           status      : user.status,
           created_at  : user.created_at,
-          last_login  : user.last_login,
           tags        : user.tags,
+          orders      : user.orders,
           preferences : user.preferences,
           address     : user.address,
-          orders      : user.orders,
         }
        : null,
   };

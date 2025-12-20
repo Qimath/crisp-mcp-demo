@@ -31,13 +31,6 @@ const USER_ADDRESS_SHAPE = {
   country : z.string().describe("Country"),
 } satisfies ZodRawShape;
 
-const USER_ORDER_REF_SHAPE = {
-  order_id : z.string().describe("Order ID (e.g. OID_001)"),
-  date     : z.string().describe("Order date in ISO format (UTC)"),
-  amount   : z.number().describe("Order total amount"),
-  status   : z.string().describe("Order status (e.g. delivered, processing, delivering)"),
-} satisfies ZodRawShape;
-
 const GET_USER_OUTPUT_SHAPE = {
   found : z.boolean().describe("Whether a user was found with the provided email"),
   user  : z
@@ -48,13 +41,12 @@ const GET_USER_OUTPUT_SHAPE = {
       phone       : z.string().describe("Phone number"),
       status      : z.string().describe("User status (e.g. active)"),
       created_at  : z.string().describe("Account creation date in ISO format (UTC)"),
-      last_login  : z.string().describe("Last login date in ISO format (UTC)"),
       tags        : z.array(z.string()).describe("User tags"),
       preferences : z.object(USER_PREFERENCES_SHAPE).describe("User preferences"),
       address     : z.object(USER_ADDRESS_SHAPE).describe("User address"),
       orders      : z
-        .array(z.object(USER_ORDER_REF_SHAPE))
-        .describe("List of orders attached to this user"),
+        .array(z.string())
+        .describe("List of orders attached to this user (higher IDs are more recent)"),
     })
     .nullable()
     .describe("User details"),

@@ -8,6 +8,7 @@
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
     "strict": true,
+    "incremental": false,
 
     "baseUrl": ".",
     "paths": {
