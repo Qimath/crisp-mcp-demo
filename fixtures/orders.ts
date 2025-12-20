@@ -53,12 +53,12 @@ const ORDERS_MOCK: Order[] = [
   {
     id                 : "OID_001",
     user_id            : "UID_002",
-    date               : daysFromNow(-170),
+    date               : daysFromNow(-470),
     total_amount       : 299.98,
     status             : "delivered",
     payment_method     : "paypal",
     tracking_number    : "TRACK-0001",
-    estimated_delivery : daysFromNow(-165),
+    estimated_delivery : daysFromNow(-465),
     courier            : "La Poste",
     notes              : "",
     gift               : true,
@@ -79,7 +79,7 @@ const ORDERS_MOCK: Order[] = [
   {
     id                 : "OID_002",
     user_id            : "UID_003",
-    date               : daysFromNow(-60),
+    date               : daysFromNow(-160),
     total_amount       : 129.99,
     status             : "refunded",
     payment_method     : "credit_card",
@@ -145,13 +145,12 @@ const ORDERS_MOCK: Order[] = [
       country : "France",
     },
   },
-
   {
     id                 : "OID_005",
     user_id            : "UID_003",
     date               : daysFromNow(-4),
     total_amount       : 149.99,
-    status             : "delivering",
+    status             : "shipped",
     payment_method     : "paypal",
     tracking_number    : "TRACK-0005",
     estimated_delivery : daysFromNow(0),

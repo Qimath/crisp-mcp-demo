@@ -22,7 +22,7 @@ function registerGetUserTool(server: McpServer): void {
         Use this tool to retrieve the account information of a user in the store's database.
 
         Common use-cases include:
-        - Retrieving user profile information
+        - Retrieving user profile information, preferences or notification status
         - Accessing user purchase history
 
         This tool can for instance be used to list orders and assess the most recent ones

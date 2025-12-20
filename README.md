@@ -118,9 +118,38 @@ We recommend also checking out [our official documentation](https://docs.crisp.c
 
 _Still in the **Automations** menu, you can go to **Playground** to test your MCP server and different AI models. Ask it a question!_
 
-### Prompt examples
+### Playground examples
 
-> Hey there, what is the status of my order `POD_002`?
+#### One-shot questions:
+
+> Could you check if the refund of my order `OID_002` has been processed?
+
+> Hi, are the notifications enabled on my account `baptiste@acme.com`?
+
+#### The AI can chain multiple tool calls (eg. find your accunt, list recent orders and get product details):
+
+> Are the items of my order `OID_001` still under warranty?
+
+> When will my latest order be delivered? I'm `chris@acme.com`
+
+#### Also try partial questions, and let the AI request additional information from you:
+
+> What was the amount of my last order?
+
+> I can't find my tracking number, can you help me?
+
+### Available accounts & orders
+
+- chris@acme.com
+    - `OID_003`
+    - `OID_006`
+- baptiste@acme.com
+    - `OID_001`
+    - `OID_004`
+- dinis@acme.com
+    - `OID_002`
+    - `OID_005`
+    - `OID_007`
 
 ## MCP good practices
 

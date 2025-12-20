@@ -85,7 +85,7 @@ const PRODUCTS_MOCK: Product[] = [
     reviews      : 640,
     sku          : "TB-9101",
     manufacturer : "TravelGear",
-    warranty     : "3 years",
+    warranty     : "1 year",
     release_date : "2023-11-05T00:00:00Z",
     dimensions   : {
       weight : "1.2kg",
