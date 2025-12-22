@@ -26,7 +26,6 @@ You can access it at: https://crisp-mcp-demo.fly.dev/mcp
 #### Pre-requisites:
 
 - Node.js `24.x` installed
-- npm (comes with Node.js)
 - a keyboard (optional, but recommended)
 
 #### Step 1 — Cloning the repo
