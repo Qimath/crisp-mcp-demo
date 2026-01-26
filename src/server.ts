@@ -17,6 +17,13 @@ app.use(express.json());
 
 const server = createMcpServer();
 
+// Registering a welcome message at the root endpoint
+app.get("/", (_req, res) => {
+  res.send(
+    "Welcome to the Crisp MCP Demo Server! Use the /mcp endpoint to interact with this MCP server.",
+  );
+});
+
 // Registering Health check endpoint
 app.get("/health", (_req, res) => {
   res.status(200).send("OK");
@@ -27,8 +34,8 @@ app.post("/mcp", (req, res) => {
   // Optionally set up an authentication middleware here (e.g. Bearer token or Basic Auth)
 
   const transport = new StreamableHTTPServerTransport({
-    sessionIdGenerator : undefined,
-    enableJsonResponse : true,
+    sessionIdGenerator: undefined,
+    enableJsonResponse: true,
   });
 
   res.on("close", () => {

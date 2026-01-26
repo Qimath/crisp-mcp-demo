@@ -92,20 +92,20 @@ We recommend also checking out [our official documentation](https://docs.crisp.c
 
 #### Step 1 — Navigate to [app.crisp.chat](https://app.crisp.chat/)
 
-#### Step 2 — In the **Automations** menu, head over to **Integrations & MCP** → **External MCP servers** and click on **Add MCP server**
+#### Step 2 — In the **AI Agent** menu, head over to **Automate → Integrations & MCP** → External MCP servers** and click on the **Add MCP server\*\* zone.
 
 ![Add MCP server](assets/add-mcp-server.png)
 
-#### Step 3 — Enter your MCP server's URL (either your hosted/tunneled URL our [hosted version](https://crisp-mcp-demo.fly.dev/mcp)) and hit **Add MCP Server Now**.
+#### Step 3 — Enter your MCP server's URL (either your hosted/tunneled URL our [hosted version](https://crisp-mcp-demo.fly.dev/mcp)) and hit **Add MCP Server**.
 
 ![Add MCP Now](assets/add-mcp-now.png)
 
 #### Step 4 — Configure the MCP server:
 
 1. Name it
-2. Hit **Refresh tools from server** to perform an initial fetch
+2. Hit **Refresh tools from server** if your tools were not fetched automatically
 3. Enable the MCP server
-4. Hit the **Save MCP Server Options** button
+4. Hit the **Save changes** button
 
 ![MCP Configuration](assets/mcp-configuration.png)
 
@@ -140,15 +140,15 @@ _Still in the **Automations** menu, you can go to **Playground** to test your MC
 ### Available accounts & orders
 
 - chris@acme.com
-    - `OID_003`
-    - `OID_006`
+  - `OID_003`
+  - `OID_006`
 - baptiste@acme.com
-    - `OID_001`
-    - `OID_004`
+  - `OID_001`
+  - `OID_004`
 - dinis@acme.com
-    - `OID_002`
-    - `OID_005`
-    - `OID_007`
+  - `OID_002`
+  - `OID_005`
+  - `OID_007`
 
 ## MCP good practices
 
@@ -167,6 +167,9 @@ before the AI can call a MCP tool. This reinforces security over sensitive opera
 
 If the user is not alredy authenticated, Crisp will send them an OTP code via email or SMS
 before allowing the AI to call your MCP tool.
+
+To do that, simply navigate to your MCP server and hit **Manage**.
+On each tool, you can toggle the **Require user identification verification** option.
 
 ### Server Authentication
 
