@@ -92,7 +92,7 @@ We recommend also checking out [our official documentation](https://docs.crisp.c
 
 #### Step 1 — Navigate to [app.crisp.chat](https://app.crisp.chat/)
 
-#### Step 2 — In the **AI Agent** menu, head over to **Automate → Integrations & MCP** → External MCP servers** and click on the **Add MCP server\*\* zone.
+#### Step 2 — In the **AI Agent** menu, head over to **AI Agent → Automate → Integrations & MCP** → External MCP servers** and click on the **Add MCP server\*\* zone.
 
 ![Add MCP server](assets/add-mcp-server.png)
 
